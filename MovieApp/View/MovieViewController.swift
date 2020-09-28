@@ -10,19 +10,30 @@ import UIKit
 
 class MovieViewController: UIViewController {
 
+   //MARK: - Properties
+    @IBOutlet weak var nowPlayingCV: UICollectionView!
     @IBOutlet weak var topRatedCV: UICollectionView!
+    @IBOutlet weak var popularMoviesCV: UICollectionView!
     
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        popularMoviesCV.dataSource = self
+        popularMoviesCV.delegate = self
+        
+        nowPlayingCV.dataSource = self
+        nowPlayingCV.delegate = self
+        
         topRatedCV.dataSource = self
         topRatedCV.delegate = self
     }
 
 }
 
+//MARK: - Extensiom: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+
 extension MovieViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
@@ -49,8 +60,4 @@ extension MovieViewController: UICollectionViewDataSource, UICollectionViewDeleg
         let height: CGFloat = width / 1.5
         return CGSize(width: width, height: height)
     }
-    
-    
-    
-    
 }

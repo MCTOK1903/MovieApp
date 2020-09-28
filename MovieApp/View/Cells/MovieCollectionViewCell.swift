@@ -10,14 +10,12 @@ import UIKit
 
 class MovieCollectionViewCell: UICollectionViewCell {
     
+    //MARK: - Properties
     @IBOutlet weak var image: UIImageView!
 
+    //MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
         image.clipsToBounds = true
-        
     }
-    
-    
-
 }

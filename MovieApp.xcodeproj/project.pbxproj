@@ -14,6 +14,7 @@
 		005CAD82252207A500444BB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005CAD80252207A500444BB8 /* Main.storyboard */; };
 		005CAD84252207A800444BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 005CAD83252207A800444BB8 /* Assets.xcassets */; };
 		005CAD87252207A800444BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005CAD85252207A800444BB8 /* LaunchScreen.storyboard */; };
+		0069441525229261000B2573 /* TvShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0069441425229261000B2573 /* TvShowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		005CAD83252207A800444BB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		005CAD86252207A800444BB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		005CAD88252207A800444BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0069441425229261000B2573 /* TvShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,65 @@
 		005CAD79252207A500444BB8 /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
-				00339AC425226801004D4BA4 /* MovieViewController.swift */,
-				005CAD7A252207A500444BB8 /* AppDelegate.swift */,
-				005CAD7C252207A500444BB8 /* SceneDelegate.swift */,
+				0069441225229137000B2573 /* Services */,
+				00694410252290B1000B2573 /* Supports */,
+				0069440F25228F6E000B2573 /* ViewModels */,
+				0069440E25228F62000B2573 /* Models */,
+				00694411252290F6000B2573 /* View */,
 				005CAD80252207A500444BB8 /* Main.storyboard */,
 				005CAD83252207A800444BB8 /* Assets.xcassets */,
 				005CAD85252207A800444BB8 /* LaunchScreen.storyboard */,
 				005CAD88252207A800444BB8 /* Info.plist */,
-				003BC4972522712E001B3E12 /* MovieCollectionViewCell.swift */,
 			);
 			path = MovieApp;
+			sourceTree = "<group>";
+		};
+		0069440E25228F62000B2573 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0069440F25228F6E000B2573 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		00694410252290B1000B2573 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				005CAD7A252207A500444BB8 /* AppDelegate.swift */,
+				005CAD7C252207A500444BB8 /* SceneDelegate.swift */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		00694411252290F6000B2573 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00339AC425226801004D4BA4 /* MovieViewController.swift */,
+				0069441425229261000B2573 /* TvShowViewController.swift */,
+				006944132522914A000B2573 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0069441225229137000B2573 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		006944132522914A000B2573 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				003BC4972522712E001B3E12 /* MovieCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0069441525229261000B2573 /* TvShowViewController.swift in Sources */,
 				005CAD7B252207A500444BB8 /* AppDelegate.swift in Sources */,
 				005CAD7D252207A500444BB8 /* SceneDelegate.swift in Sources */,
 				00339AC525226801004D4BA4 /* MovieViewController.swift in Sources */,
