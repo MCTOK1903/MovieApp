@@ -45,6 +45,12 @@ class TvShowViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tabBarController?.tabBar.isHidden = false
+    }
+    
     
     //MARK: - Func
     func getDataFromApi(){
@@ -132,5 +138,25 @@ extension TvShowViewController: UICollectionViewDataSource, UICollectionViewDele
         let width: CGFloat = floor(adjustedHeight / columns)
         let height: CGFloat = width / 1.5
         return CGSize(width: width, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        switch collectionView.tag {
+        case 0:
+            let targetId = topRatedTvShowResult[indexPath.item].id
+            presentViewController(targetId: targetId)
+        case 1:
+            let targetId = popularTvShowResult[indexPath.item].id
+            presentViewController(targetId: targetId)
+        default:
+            return
+        }
+    }
+    
+    func presentViewController(targetId:Int){
+        let vc = self.storyboard?.instantiateViewController(identifier: "TvShowDetailVC") as! TvShowDetailViewController
+        vc.targetId  = targetId
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

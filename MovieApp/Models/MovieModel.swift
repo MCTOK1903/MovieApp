@@ -24,7 +24,7 @@ struct Result: Codable {
     let video: Bool
     let posterPath: String
     let id: Int
-    let adult: Bool
+    //let adult: Bool
     let backdropPath: String
     let originalLanguage: String
     let originalTitle: String
@@ -40,7 +40,7 @@ struct Result: Codable {
         case video = "video"
         case posterPath = "poster_path"
         case id = "id"
-        case adult = "adult"
+        //case adult = "adult"
         case backdropPath = "backdrop_path"
         case originalLanguage = "original_language"
         case originalTitle = "original_title"
