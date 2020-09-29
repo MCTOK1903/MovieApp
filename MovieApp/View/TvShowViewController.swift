@@ -45,9 +45,11 @@ class TvShowViewController: UIViewController {
         
     }
     
+    
+    //MARK: - Func
     func getDataFromApi(){
         
-        NetworkService.shared.service(.get, url: UrlConstant.TOP_RATED_TVSHOW_URL, model: TvShow.self, detailID: nil) { [weak self] (response) in
+        NetworkService.shared.service(.get, url: UrlConstant.TOP_RATED_TVSHOW_URL, model: TvShow.self) { [weak self] (response) in
             guard let self = self else {
                 return
             }
@@ -62,7 +64,7 @@ class TvShowViewController: UIViewController {
             }
         }
         
-        NetworkService.shared.service(.get, url: UrlConstant.POPULAR_TVSHOW_URL, model: TvShow.self, detailID: nil) { [weak self] (response) in
+        NetworkService.shared.service(.get, url: UrlConstant.POPULAR_TVSHOW_URL, model: TvShow.self) { [weak self] (response) in
             guard let self = self else {
                 return
             }
@@ -80,6 +82,7 @@ class TvShowViewController: UIViewController {
     
 }
 
+//MARK: - Extension: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 extension TvShowViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

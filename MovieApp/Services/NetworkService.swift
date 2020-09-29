@@ -24,7 +24,6 @@ extension NetworkService {
      public func service<T:Codable>(_ method: HTTPMethod,
                                    url:String,
                                    model: T.Type,
-                                   detailID:Int?,
                                    completion: @escaping(AFResult<Codable>) -> Void ) {
         
         

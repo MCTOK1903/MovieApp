@@ -58,7 +58,7 @@ class MovieViewController: UIViewController {
     //MARK: - func
     func getDataFromApi(){
         
-        NetworkService.shared.service(.get, url: UrlConstant.NOW_PLAYING_MOVIE, model: Movie.self, detailID: nil) { [weak self] (response) in
+        NetworkService.shared.service(.get, url: UrlConstant.NOW_PLAYING_MOVIE, model: Movie.self) { [weak self] (response) in
             guard let self = self else {
                 return
             }
@@ -73,7 +73,7 @@ class MovieViewController: UIViewController {
             }
         }
         
-        NetworkService.shared.service(.get, url: UrlConstant.TOP_RATED_MOVIE, model: Movie.self, detailID: nil) { [weak self] (response) in
+        NetworkService.shared.service(.get, url: UrlConstant.TOP_RATED_MOVIE, model: Movie.self) { [weak self] (response) in
             guard let self = self else {
                 return
             }
@@ -88,7 +88,7 @@ class MovieViewController: UIViewController {
             }
         }
         
-        NetworkService.shared.service(.get, url: UrlConstant.POPULAR_MOVIE, model: Movie.self, detailID: nil) { [weak self] (response) in
+        NetworkService.shared.service(.get, url: UrlConstant.POPULAR_MOVIE, model: Movie.self) { [weak self] (response) in
             guard let self = self else {
                 return
             }
@@ -109,6 +109,7 @@ class MovieViewController: UIViewController {
 
 extension MovieViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    //MARK: - numberOfItemsInSection
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         switch collectionView.tag {
@@ -123,6 +124,7 @@ extension MovieViewController: UICollectionViewDataSource, UICollectionViewDeleg
         }
     }
     
+    //MARK: - cellForItemAt
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         switch collectionView.tag {
@@ -153,6 +155,7 @@ extension MovieViewController: UICollectionViewDataSource, UICollectionViewDeleg
         }
     }
     
+    //MARK: - sizeForItemAt
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let columns: CGFloat = 1
         let collectionViewHeight = collectionView.bounds.height
@@ -164,4 +167,29 @@ extension MovieViewController: UICollectionViewDataSource, UICollectionViewDeleg
         let height: CGFloat = width / 1.5
         return CGSize(width: width, height: height)
     }
+    
+    //MARK: - didSelectItemAt
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch collectionView.tag {
+        case 0:
+            let targetdataId = nowPlayingMovieResult[indexPath.item].id
+            presentViewController(targetId: targetdataId)
+        case 1:
+            let targetdataId = topRatedMovieReult[indexPath.item].id
+            presentViewController(targetId: targetdataId)
+        case 2:
+            let targetdataId = popularMovieResult[indexPath.item].id
+            presentViewController(targetId: targetdataId)
+        default:
+            return
+        }
+    }
+    
+    
+    func presentViewController(targetId:Int){
+        let vc = self.storyboard?.instantiateViewController(identifier: "MovieDetailViewController") as! MovieDetailViewController
+        vc.targetId  = targetId
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

@@ -13,11 +13,11 @@ class UrlConstant {
     //MARK: - KEY
     
     private static let KEY = "fc6fbc3ee72d36c19e1752a6ee0f6273"
-    private static let API_KEY = "?api_key=" + KEY
+    static let API_KEY = "?api_key=" + KEY
     
     //MARK: - Movie
     
-    private static let MOVIE_URL = "https://api.themoviedb.org/3/movie/"
+    static let MOVIE_URL = "https://api.themoviedb.org/3/movie/"
     static let TOP_RATED_MOVIE = MOVIE_URL + "top_rated" + API_KEY
     static let NOW_PLAYING_MOVIE = MOVIE_URL + "now_playing" + API_KEY
     static let POPULAR_MOVIE =  MOVIE_URL + "popular" + API_KEY
