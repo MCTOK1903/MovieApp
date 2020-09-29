@@ -21,8 +21,10 @@
 		0065F0FA2523408E003C5151 /* TvShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065F0F92523408E003C5151 /* TvShowModel.swift */; };
 		0065F0FC252340CB003C5151 /* TvShowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065F0FB252340CB003C5151 /* TvShowViewModel.swift */; };
 		0069441525229261000B2573 /* TvShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0069441425229261000B2573 /* TvShowViewController.swift */; };
-		00A02C2225238B7E00C4EED8 /* TopRatedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A02C2125238B7E00C4EED8 /* TopRatedCollectionViewCell.swift */; };
+		00A02C2225238B7E00C4EED8 /* TopRatedMovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A02C2125238B7E00C4EED8 /* TopRatedMovieCollectionViewCell.swift */; };
 		00A02C2425238F5E00C4EED8 /* PopularMovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A02C2325238F5E00C4EED8 /* PopularMovieCollectionViewCell.swift */; };
+		00A02C282523981D00C4EED8 /* PopularTvSHowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A02C272523981D00C4EED8 /* PopularTvSHowCollectionViewCell.swift */; };
+		00A02C2A2523983600C4EED8 /* TopRatedTvShowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A02C292523983600C4EED8 /* TopRatedTvShowCollectionViewCell.swift */; };
 		75725AB6E490D4675354DAFD /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D2AF9F747EE094320563F0 /* Pods_MovieApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +45,10 @@
 		0065F0F92523408E003C5151 /* TvShowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowModel.swift; sourceTree = "<group>"; };
 		0065F0FB252340CB003C5151 /* TvShowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowViewModel.swift; sourceTree = "<group>"; };
 		0069441425229261000B2573 /* TvShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowViewController.swift; sourceTree = "<group>"; };
-		00A02C2125238B7E00C4EED8 /* TopRatedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedCollectionViewCell.swift; sourceTree = "<group>"; };
+		00A02C2125238B7E00C4EED8 /* TopRatedMovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		00A02C2325238F5E00C4EED8 /* PopularMovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		00A02C272523981D00C4EED8 /* PopularTvSHowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularTvSHowCollectionViewCell.swift; sourceTree = "<group>"; };
+		00A02C292523983600C4EED8 /* TopRatedTvShowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedTvShowCollectionViewCell.swift; sourceTree = "<group>"; };
 		2C7C60F1F69B833885CEF3B4 /* Pods-MovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.debug.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B598DB709286F25D13C077B8 /* Pods-MovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.release.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.release.xcconfig"; sourceTree = "<group>"; };
 		F9D2AF9F747EE094320563F0 /* Pods_MovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,11 +157,29 @@
 		006944132522914A000B2573 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				003BC4972522712E001B3E12 /* MovieCollectionViewCell.swift */,
-				00A02C2125238B7E00C4EED8 /* TopRatedCollectionViewCell.swift */,
-				00A02C2325238F5E00C4EED8 /* PopularMovieCollectionViewCell.swift */,
+				00A02C26252397FA00C4EED8 /* TvShowVCCells */,
+				00A02C25252397E900C4EED8 /* MovieVCCells */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		00A02C25252397E900C4EED8 /* MovieVCCells */ = {
+			isa = PBXGroup;
+			children = (
+				003BC4972522712E001B3E12 /* MovieCollectionViewCell.swift */,
+				00A02C2125238B7E00C4EED8 /* TopRatedMovieCollectionViewCell.swift */,
+				00A02C2325238F5E00C4EED8 /* PopularMovieCollectionViewCell.swift */,
+			);
+			path = MovieVCCells;
+			sourceTree = "<group>";
+		};
+		00A02C26252397FA00C4EED8 /* TvShowVCCells */ = {
+			isa = PBXGroup;
+			children = (
+				00A02C272523981D00C4EED8 /* PopularTvSHowCollectionViewCell.swift */,
+				00A02C292523983600C4EED8 /* TopRatedTvShowCollectionViewCell.swift */,
+			);
+			path = TvShowVCCells;
 			sourceTree = "<group>";
 		};
 		5470AB1422546A97E17655AF /* Pods */ = {
@@ -295,11 +317,13 @@
 				0065F0F4252335CF003C5151 /* MovieModel.swift in Sources */,
 				0052DD1D25235C8E00A62B53 /* Constants.swift in Sources */,
 				0069441525229261000B2573 /* TvShowViewController.swift in Sources */,
+				00A02C282523981D00C4EED8 /* PopularTvSHowCollectionViewCell.swift in Sources */,
 				00A02C2425238F5E00C4EED8 /* PopularMovieCollectionViewCell.swift in Sources */,
 				005CAD7B252207A500444BB8 /* AppDelegate.swift in Sources */,
+				00A02C2A2523983600C4EED8 /* TopRatedTvShowCollectionViewCell.swift in Sources */,
 				0065F0FC252340CB003C5151 /* TvShowViewModel.swift in Sources */,
 				0065F0FA2523408E003C5151 /* TvShowModel.swift in Sources */,
-				00A02C2225238B7E00C4EED8 /* TopRatedCollectionViewCell.swift in Sources */,
+				00A02C2225238B7E00C4EED8 /* TopRatedMovieCollectionViewCell.swift in Sources */,
 				0065F0F825233EF9003C5151 /* MovieViewModel.swift in Sources */,
 				005CAD7D252207A500444BB8 /* SceneDelegate.swift in Sources */,
 				00339AC525226801004D4BA4 /* MovieViewController.swift in Sources */,

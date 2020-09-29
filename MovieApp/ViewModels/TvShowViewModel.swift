@@ -26,4 +26,8 @@ extension TvShowViewModel {
     var tvShowModel: TvShow {
         return self.tvShow
     }
+    
+    var resultModel: [Results] {
+        return self.tvShow.results
+    }
 }

@@ -11,7 +11,7 @@
         <!--TV Shows-->
         <scene sceneID="gay-CP-DGz">
             <objects>
-                <viewController id="i12-ip-nR5" sceneMemberID="viewController">
+                <viewController id="i12-ip-nR5" customClass="TvShowViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Or-A7-3Fc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="gQq-cd-NKp" customClass="MovieCollectionViewCell" customModule="MovieApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopRatedaTvShowCell" id="gQq-cd-NKp" customClass="TopRatedTvShowCollectionViewCell" customModule="MovieApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="4" width="232" height="171"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bXG-k2-JFU">
@@ -47,7 +47,7 @@
                                                         <constraint firstAttribute="width" constant="232" id="VmE-Sd-EnH"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45k-LL-Xl1">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="45k-LL-Xl1">
                                                     <rect key="frame" x="8" y="108" width="216" height="28"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -77,7 +77,9 @@
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="232" height="171"/>
                                         <connections>
-                                            <outlet property="image" destination="xdw-7a-jje" id="aDW-4W-zV6"/>
+                                            <outlet property="tvShowImage" destination="xdw-7a-jje" id="fVI-KA-ryt"/>
+                                            <outlet property="tvShowTitle" destination="45k-LL-Xl1" id="tvt-pU-EqO"/>
+                                            <outlet property="tvShowVote" destination="Ke6-dV-G45" id="9jZ-Ip-bgq"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -88,7 +90,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mmR-wH-rLE">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mmR-wH-rLE">
                                 <rect key="frame" x="20" y="375" width="374" height="179.5"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iaq-ra-VnJ">
@@ -98,7 +100,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="wGO-FX-D5U" customClass="MovieCollectionViewCell" customModule="MovieApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="popularTvShowCell" id="wGO-FX-D5U" customClass="PopularTvSHowCollectionViewCell" customModule="MovieApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="4.5" width="232" height="171"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1pi-VF-fbb">
@@ -113,7 +115,7 @@
                                                         <constraint firstAttribute="height" constant="100" id="tEG-g6-VyU"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWI-LO-jTb">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="QWI-LO-jTb">
                                                     <rect key="frame" x="8" y="108" width="216" height="28"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -143,7 +145,9 @@
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="232" height="171"/>
                                         <connections>
-                                            <outlet property="image" destination="b6a-Lq-Um9" id="sPH-lF-y6z"/>
+                                            <outlet property="tvShowImage" destination="b6a-Lq-Um9" id="cnh-n9-zxI"/>
+                                            <outlet property="tvShowTitle" destination="QWI-LO-jTb" id="0ue-ZU-off"/>
+                                            <outlet property="tvShowVote" destination="NhP-kr-ZYD" id="bpN-Zt-LLv"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -169,6 +173,10 @@
                         <viewLayoutGuide key="safeArea" id="m8c-Qc-1dD"/>
                     </view>
                     <navigationItem key="navigationItem" title="TV Shows" id="eLW-kr-buA"/>
+                    <connections>
+                        <outlet property="popularTvShowCV" destination="mmR-wH-rLE" id="mlc-Rl-JWt"/>
+                        <outlet property="topRatedTvShowCV" destination="cGk-xi-oI3" id="puf-3Z-Gnc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UBo-om-n2l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -204,7 +212,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopRatedMovieCell" id="q4c-jk-ti6" customClass="TopRatedCollectionViewCell" customModule="MovieApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TopRatedMovieCell" id="q4c-jk-ti6" customClass="TopRatedMovieCollectionViewCell" customModule="MovieApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="4.5" width="232" height="171"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BSn-VK-BuU">

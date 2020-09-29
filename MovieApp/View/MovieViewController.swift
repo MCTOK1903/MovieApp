@@ -102,8 +102,6 @@ class MovieViewController: UIViewController {
                 break
             }
         }
-        
-        
     }
 }
 
@@ -133,21 +131,21 @@ extension MovieViewController: UICollectionViewDataSource, UICollectionViewDeleg
             let imageUrl = URL(string: UrlConstant.IMAGE_URL + "\(nowPlayingMovieResult[indexPath.item].backdropPath)")
             cell.image.sd_setImage(with: imageUrl?.absoluteURL)
             cell.movieNameLabel.text = nowPlayingMovieResult[indexPath.item].title
-            cell.movieVoteLabel.text = "Vote: " + String(nowPlayingMovieResult[indexPath.item].voteCount)
+            cell.movieVoteLabel.text = "Popularity: " + String(nowPlayingMovieResult[indexPath.item].popularity)
             return cell
         case 1:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopRatedMovieCell", for: indexPath) as! TopRatedCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopRatedMovieCell", for: indexPath) as! TopRatedMovieCollectionViewCell
             let imageUrl = URL(string: UrlConstant.IMAGE_URL + "\(topRatedMovieReult[indexPath.item].backdropPath)")
             cell.image.sd_setImage(with: imageUrl?.absoluteURL)
             cell.nameLabel.text = topRatedMovieReult[indexPath.item].title
-            cell.movieVoteLabel.text = "Vote: " + String(topRatedMovieReult[indexPath.item].voteCount)
+            cell.movieVoteLabel.text = "Popularity: " + String(topRatedMovieReult[indexPath.item].popularity)
             return cell
         case 2:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularMovieCell", for: indexPath) as! PopularMovieCollectionViewCell
             let imageUrl = URL(string: UrlConstant.IMAGE_URL + "\(popularMovieResult[indexPath.item].backdropPath)")
             cell.movieImage.sd_setImage(with: imageUrl?.absoluteURL)
             cell.movieNameLabel?.text = popularMovieResult[indexPath.item].title
-            cell.movieVoteLabel?.text = "Vote: " + String(popularMovieResult[indexPath.item].voteCount)
+            cell.movieVoteLabel?.text = "Popularity: " + String(popularMovieResult[indexPath.item].popularity)
             return cell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as! MovieCollectionViewCell
@@ -156,7 +154,6 @@ extension MovieViewController: UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         let columns: CGFloat = 1
         let collectionViewHeight = collectionView.bounds.height
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout

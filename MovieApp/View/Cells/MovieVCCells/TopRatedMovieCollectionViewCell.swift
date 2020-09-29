@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TopRatedCollectionViewCell: UICollectionViewCell {
+class TopRatedMovieCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
