@@ -13,6 +13,10 @@ class MovieCollectionViewCell: UICollectionViewCell {
     //MARK: - Properties
     @IBOutlet weak var image: UIImageView!
 
+    @IBOutlet weak var movieNameLabel: UILabel!
+    
+    @IBOutlet weak var movieVoteLabel: UILabel!
+    
     //MARK: - LifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()

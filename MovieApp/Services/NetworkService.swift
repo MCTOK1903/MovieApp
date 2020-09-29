@@ -15,10 +15,6 @@ class NetworkService {
     //MARK: - Properties
     public static let shared: NetworkService = NetworkService()
     
-    private let apiKey = "fc6fbc3ee72d36c19e1752a6ee0f6273"
-    
-    private let movieUrl = "https://api.themoviedb.org/3/movie/top_rated"
-    
 }
 
 //MARK: - public Functions

@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - TvShow
 struct TvShow: Codable {
-    let results: [Result]
+    let results: [Results]
 
     enum CodingKeys: String, CodingKey {
         case results = "results"
@@ -18,7 +18,7 @@ struct TvShow: Codable {
 }
 
 // MARK: - Result
-struct Result: Codable {
+struct Results: Codable {
     let posterPath: String
     let popularity: Double
     let id: Int

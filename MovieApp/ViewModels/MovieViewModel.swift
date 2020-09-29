@@ -12,7 +12,7 @@ struct MovieViewModel {
     
     //MARK: - Properties
     var movie: Movie
-    
+
     //MARK: - LifeCycle
     init(movie: Movie) {
         self.movie = movie
@@ -24,5 +24,9 @@ struct MovieViewModel {
 extension MovieViewModel {
     var movieModel: Movie  {
         return self.movie
+    }
+    
+    var resultModel: [Result] {
+        return self.movie.results
     }
 }
