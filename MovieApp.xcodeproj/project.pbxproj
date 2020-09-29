@@ -16,6 +16,9 @@
 		005CAD87252207A800444BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005CAD85252207A800444BB8 /* LaunchScreen.storyboard */; };
 		0065F0F4252335CF003C5151 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065F0F3252335CF003C5151 /* MovieModel.swift */; };
 		0065F0F6252336AB003C5151 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065F0F5252336AB003C5151 /* NetworkService.swift */; };
+		0065F0F825233EF9003C5151 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065F0F725233EF9003C5151 /* MovieViewModel.swift */; };
+		0065F0FA2523408E003C5151 /* TvShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065F0F92523408E003C5151 /* TvShowModel.swift */; };
+		0065F0FC252340CB003C5151 /* TvShowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0065F0FB252340CB003C5151 /* TvShowViewModel.swift */; };
 		0069441525229261000B2573 /* TvShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0069441425229261000B2573 /* TvShowViewController.swift */; };
 		75725AB6E490D4675354DAFD /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D2AF9F747EE094320563F0 /* Pods_MovieApp.framework */; };
 /* End PBXBuildFile section */
@@ -32,6 +35,9 @@
 		005CAD88252207A800444BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0065F0F3252335CF003C5151 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		0065F0F5252336AB003C5151 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		0065F0F725233EF9003C5151 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		0065F0F92523408E003C5151 /* TvShowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowModel.swift; sourceTree = "<group>"; };
+		0065F0FB252340CB003C5151 /* TvShowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowViewModel.swift; sourceTree = "<group>"; };
 		0069441425229261000B2573 /* TvShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvShowViewController.swift; sourceTree = "<group>"; };
 		2C7C60F1F69B833885CEF3B4 /* Pods-MovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.debug.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B598DB709286F25D13C077B8 /* Pods-MovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.release.xcconfig"; path = "Target Support Files/Pods-MovieApp/Pods-MovieApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				0065F0F3252335CF003C5151 /* MovieModel.swift */,
+				0065F0F92523408E003C5151 /* TvShowModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -95,6 +102,8 @@
 		0069440F25228F6E000B2573 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0065F0F725233EF9003C5151 /* MovieViewModel.swift */,
+				0065F0FB252340CB003C5151 /* TvShowViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -269,6 +278,9 @@
 				0065F0F4252335CF003C5151 /* MovieModel.swift in Sources */,
 				0069441525229261000B2573 /* TvShowViewController.swift in Sources */,
 				005CAD7B252207A500444BB8 /* AppDelegate.swift in Sources */,
+				0065F0FC252340CB003C5151 /* TvShowViewModel.swift in Sources */,
+				0065F0FA2523408E003C5151 /* TvShowModel.swift in Sources */,
+				0065F0F825233EF9003C5151 /* MovieViewModel.swift in Sources */,
 				005CAD7D252207A500444BB8 /* SceneDelegate.swift in Sources */,
 				00339AC525226801004D4BA4 /* MovieViewController.swift in Sources */,
 				003BC4982522712E001B3E12 /* MovieCollectionViewCell.swift in Sources */,
