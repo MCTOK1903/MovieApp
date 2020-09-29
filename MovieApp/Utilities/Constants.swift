@@ -20,4 +20,8 @@ class UrlConstant {
     static let POPULAR_MOVIE =  MOVIE_URL + "popular" + API_KEY
     
     //MARK: - TvShow
+    
+    //MARK: - Image
+    
+    static let IMAGE_URL = "https://image.tmdb.org/t/p/w500"
 }
