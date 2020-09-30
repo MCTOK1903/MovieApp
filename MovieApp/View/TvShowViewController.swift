@@ -109,7 +109,7 @@ extension TvShowViewController: UICollectionViewDataSource, UICollectionViewDele
         switch collectionView.tag {
         case 0:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopRatedaTvShowCell", for: indexPath) as! TopRatedTvShowCollectionViewCell
-            let imageUrl = URL(string: UrlConstant.IMAGE_URL + "\(topRatedTvShowResult[indexPath.item].backdropPath)")
+            let imageUrl = URL(string: UrlConstant.IMAGE_URL + "\(topRatedTvShowResult[indexPath.item].posterPath)")
             cell.tvShowImage.sd_setImage(with: imageUrl?.absoluteURL)
             cell.tvShowTitle.text = topRatedTvShowResult[indexPath.item].name
             cell.tvShowVote.text = "Popularity:" + String(topRatedTvShowResult[indexPath.item].popularity)
@@ -117,7 +117,7 @@ extension TvShowViewController: UICollectionViewDataSource, UICollectionViewDele
             
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "popularTvShowCell", for: indexPath) as! PopularTvSHowCollectionViewCell
-            let imageUrl = URL(string: UrlConstant.IMAGE_URL + "\(popularTvShowResult[indexPath.item].backdropPath)")
+            let imageUrl = URL(string: UrlConstant.IMAGE_URL + "\(popularTvShowResult[indexPath.item].posterPath)")
             cell.tvShowImage.sd_setImage(with: imageUrl?.absoluteURL)
             cell.tvShowTitle.text = popularTvShowResult[indexPath.item].name
             cell.tvShowVote.text = "Popularity:" + String(popularTvShowResult[indexPath.item].popularity)

@@ -22,7 +22,7 @@ struct Results: Codable {
     let posterPath: String
     let popularity: Double
     let id: Int
-    let backdropPath: String
+    //let backdropPath: String
     let voteAverage: Double
     let overview: String
     let firstAirDate: String
@@ -37,7 +37,7 @@ struct Results: Codable {
         case posterPath = "poster_path"
         case popularity = "popularity"
         case id = "id"
-        case backdropPath = "backdrop_path"
+        //case backdropPath = "backdrop_path"
         case voteAverage = "vote_average"
         case overview = "overview"
         case firstAirDate = "first_air_date"
